@@ -176,8 +176,9 @@ const PostButton = styled.button`
     border-radius: 20px;
     padding-left: 16px;
     padding-right: 16px;
-    background: #0a66c2;
-    color: white;
+    //changes post button from dark to blue when you type in textbox 
+    background: ${(props) => (props.disabled ? "rgba(0, 0, 0, 0.8)" : "#0a66c2")};
+    color: ${(props) => (props.disabled ? "rgba(1, 1, 1, 0.2)" : "white")};
     &:hover {
         background: #004182;
     }
