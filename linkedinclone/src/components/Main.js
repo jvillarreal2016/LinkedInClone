@@ -36,7 +36,7 @@ const Main = (props) => {
             props.articles.length === 0 ? ( 
             <p>There are no articles</p>
            ) : (
-        <Container>
+         <Container> 
             <ShareBox>
             { props.user && props.user.photoURL ? (
             <img src={props.user.photoURL} />
@@ -135,7 +135,7 @@ const Main = (props) => {
 
                 </Content>
             <PostModal showModal={showModal} handleClick={handleClick} />
-        </Container>
+         </Container>
         )}
         </>
     );
@@ -355,6 +355,7 @@ const mapStateToProps = (state) => {
     return {
         loading: state.articleState.loading,
         user: state.userState.user,
+        articles: state.articleState.articles,
     };
 };
 
